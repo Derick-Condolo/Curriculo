@@ -1,0 +1,229 @@
+body{
+    font-family: "Montserrat",sans-serif;
+    background-color: rgb(50, 50, 67);
+}
+
+header{
+    width: 100.85%;
+    height: 50px;
+    margin-left: -8px;
+    margin-top: -8px;
+    background-color: black;
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+header h1{
+    font-size: 30px;
+    margin-top: 8px;
+}
+
+.button{
+    width: 150px;
+    height: 50px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 1rem;
+    background-color: rgb(0, 0, 0);
+    font-family: "Montserrat",sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+}
+.button:hover{
+    transform: scale(1.05);
+    transition: 100ms linear;
+    background-color: rgb(40, 40, 40);
+}
+
+
+/* Currículo */
+.profile{
+    background-color: rgb(42, 42, 67);
+    color: white;
+    width: 100.85%;
+    height: 250px;
+    margin-left: -8px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 1rem;
+}
+.profile-name{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-right: 475px;
+}
+.profile-img{
+    width: 125px;
+    height: 125px;
+    margin-left: 400px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 3rem;
+    background-color: white; 
+}
+.edit-profile{
+    width: 150px;
+    height: 50px;
+    margin-left: 65px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 1rem;
+    background-color: rgb(0, 0, 0);
+    font-family: "Montserrat",sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+.info{
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 1rem;
+    margin-top: 15px;
+    margin-left: 400px;
+    margin-right: 400px;
+    background-color: rgb(25, 25, 67);
+    color: white;
+}
+.info h1{
+    margin-left: 50px;
+}
+.info p{
+    margin-left: 100px;
+}
+
+/* Editar */
+.edit-box{
+    position: absolute;
+    margin-top: 30%;
+    margin-bottom: 5%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(25, 25, 67);
+    padding: 20px;
+    border-radius: 20px;
+    width: 50%;
+    height: 104%;
+    color: white;
+    font-family: "Montserrat",sans-serif;
+    font-weight: lighter;
+}
+
+fieldset{
+    border: 1px solid white;
+    border-radius: 1rem;
+}
+
+legend{
+    border: 1px solid white;
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: bolder;        
+}
+        
+.inputBox{
+    position: relative;
+}
+
+.inputuser{
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 1000;
+    width: 100%;
+    letter-spacing: 2px;
+}
+
+.labelInput{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5s;
+}
+        
+.inputuser:focus ~ .labelInput,
+.inputuser:valid ~ .labelInput{
+    top: -90%;
+    font-size: 12px;
+    color: white;
+}
+
+.labelfile{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.inputfile{
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    outline: none;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: 500;
+    width: 100%;
+}
+
+.inputfile:focus ~ .labelfile,
+.inputfile:valid ~ .labelfile{
+    top: -90%;
+    font-size: 12px;
+    color: white;
+}
+
+.microtext{
+    font-size: 12px;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    gap: 425px;
+}
+
+.area-experiencias{
+    position: absolute;
+    margin-top: 30%;
+    margin-bottom: 5%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(25, 25, 67);
+    padding: 20px;
+    border-radius: 20px;
+    width: 50%;
+    height: 104%;
+    color: white;
+    font-family: "Montserrat",sans-serif;
+    font-weight: lighter;
+}
+
+.area-formacoes{
+    position: absolute;
+    margin-top: 30%;
+    margin-bottom: 5%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(25, 25, 67);
+    padding: 20px;
+    border-radius: 20px;
+    width: 50%;
+    height: 104%;
+    color: white;
+    font-family: "Montserrat",sans-serif;
+    font-weight: lighter;
+}

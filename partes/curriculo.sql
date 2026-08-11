@@ -1,10 +1,16 @@
+create user 'condolo'@'localhost' identified by '1234';
+create database curriculo;
+grant all privileges on curriculo.* to 'condolo';
+
 use curriculo;
 
 create table if not exists dados (
 	id int auto_increment primary key,
     nome varchar(255) not null,
+    nome_apr varchar(255) not null,
     descricao varchar(2000),
     data_nasc date not null,
+    idade int(3) not null,
     cargo varchar(100),
     foto varchar(1000)
 );
@@ -40,19 +46,21 @@ create table if not exists formacao(
     constraint fk_formacao foreign key (uid) references dados(id)
 );
 
-insert into dados values(default,'Derick Condolo Lima','vai cortinas','2009-01-08',null,null);
+insert into dados values(default,'Derick Condolo Lima','Derick Condolo','Estudante em busca do primeiro emprego.','2009-01-08','17',null,null);
 select * from dados;
+truncate table dados;
+drop table dados;
 
 insert into contatos values (default,1,'condoloderick@gmail.com','(11) 95117-6832','Rua Eucalipto, 700 - Jardim Ipê, Mauá - SP');
 select * from contatos;
+truncate table contatos;
 drop table contatos;
 
 insert into experiencias values (default,1,null,null,null,null);
-select * from experiencias;
-drop table experiencias;
 truncate table experiencias;
+drop table experiencias;
 
 insert into formacao values(default,1,'Ensino Médio','E.E. Profº Antonio Lapate Netto','Cursando',null,'Jan/2020','Dez/2026');
-insert into formacao values (default,1,'Ensino Técnico','SENAI Armando de Arruda Pereira','Cursando','Desenvolvimento de Sistemas','Jul/2025','Jul/2027');
-select * from formacao;
+insert into formacao values (default,1,'Ensino Técnico','SENAI Armando de Arruda Pereira','Cursando','Desenvolvimento de Sistemas','Jul/2025','Jun/2027');
+truncate table formacao;
 drop table formacao;
