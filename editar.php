@@ -78,129 +78,120 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' ){
     <header>
         <h1>Currículo</h1>
     </header>
-    <div class="edit-box">
-        <form action="" method="POST" enctype="multipart/form-data">
+    <section class="teste">
+        <div class="edit-box">
+            <form action="" method="POST" enctype="multipart/form-data">
+                <fieldset>
+                    <legend><b>Editar informações</b></legend>
+                    <br>
+                    <h3>Dados Pessoais</h3>
+                    <br>
+                    <div class="inputBox">
+                        <input type="text" name="nome" id="nome" class="inputuser">
+                        <label for="nome" class="labelInput">Nome Completo</label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="nome_apr" id="nome_apr" class="inputuser">
+                        <label for="nome_apr" class="labelInput">Nome de Exibição</label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="descricao" id="descricao" class="inputuser">
+                        <label for="descricao" class="labelInput">Descrição</label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="date" name="data_nasc" id="data_nasc" class="inputuser">
+                        <label for="data_nasc" class="labelInput">Data de Nascimento</label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="number" name="idade" id="idade" class="inputuser">
+                        <label for="idade" class="labelInput">Idade</label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="cargo" id="cargo" class="inputuser">
+                        <label for="cargo" class="labelInput">Cargo (opcional)</label>
+                    </div>
+                    <div class="input-box">
+                        <p class="microtext">Foto de Perfil</p>
+                        <input type="file" id="foto" name="foto" class="inputfile">
+                        <label for="foto" class="labelfile">Foto de Perfil</label>
+                    </div>
+                    <br><br><br>
+                    <h3>Contatos</h3>
+                    <br>
+                    <div class="inputBox">
+                        <input type="email" name="email" id="email" class="inputuser">
+                        <label for="email" class="labelInput">Email</label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="tel" name="telefone" id="telefone" class="inputuser">
+                        <label for="telefone" class="labelInput">Telefone</label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="endereco" id="endereco" class="inputuser">
+                        <label for="endereco" class="labelInput">Endereço</label>
+                    </div>
+                    <br><br><br>
+                    <div class="buttons">
+                        <button type="submit" name="submit" id="submit" class="button edit-profile">Salvar alterações</button>
+                        
+                    </div>
+                    <br>
+                </fieldset>
+            </form>
+            <a href="curriculo.php" class="return-profile"><button class="button">Voltar</button></a>
+        </div>
+        <article class="area-experiencias">
             <fieldset>
-                <legend><b>Editar informações</b></legend>
-                <br>
-                <h3>Dados Pessoais</h3>
-                <br>
-                <div class="inputBox">
-                    <input type="text" name="nome" id="nome" class="inputuser">
-                    <label for="nome" class="labelInput">Nome Completo</label>
-                </div>
-                <br><br>
-                <div class="inputBox">
-                    <input type="text" name="nome_apr" id="nome_apr" class="inputuser">
-                    <label for="nome_apr" class="labelInput">Nome de Exibição</label>
-                </div>
-                <br><br>
-                <div class="inputBox">
-                    <input type="text" name="descricao" id="descricao" class="inputuser">
-                    <label for="descricao" class="labelInput">Descrição</label>
-                </div>
-                <br><br>
-                <div class="inputBox">
-                    <input type="date" name="data_nasc" id="data_nasc" class="inputuser">
-                    <label for="data_nasc" class="labelInput">Data de Nascimento</label>
-                </div>
-                <br><br>
-                <div class="inputBox">
-                    <input type="number" name="idade" id="idade" class="inputuser">
-                    <label for="idade" class="labelInput">Idade</label>
-                </div>
-                <br><br>
-                <div class="inputBox">
-                    <input type="text" name="cargo" id="cargo" class="inputuser">
-                    <label for="cargo" class="labelInput">Cargo (opcional)</label>
-                </div>
-                <div class="input-box">
-                    <p class="microtext">Foto de Perfil</p>
-                    <input type="file" id="foto" name="foto" class="inputfile">
-                    <label for="foto" class="labelfile">Foto de Perfil</label>
-                </div>
-                <br><br><br>
-                <h3>Contatos</h3>
-                <br>
-                <div class="inputBox">
-                    <input type="email" name="email" id="email" class="inputuser">
-                    <label for="email" class="labelInput">Email</label>
-                </div>
-                <br><br>
-                <div class="inputBox">
-                    <input type="tel" name="telefone" id="telefone" class="inputuser">
-                    <label for="telefone" class="labelInput">Telefone</label>
-                </div>
-                <br><br>
-                <div class="inputBox">
-                    <input type="text" name="endereco" id="endereco" class="inputuser">
-                    <label for="endereco" class="labelInput">Endereço</label>
-                </div>
-                <br><br><br>
-                <div class="buttons">
-                    <button type="submit" name="submit" id="submit" class="button edit-profile">Salvar alterações</button>
-                </div>
-                <br>
-            </fieldset>
-        </form>
-    </div>
-    <article class="area-experiencias">
-        <div class="select-experiencias">
-            <fieldset>
-                <legend>Editar Experiências</legend>
+                <legend><b>Editar Experiências</b></legend>
                 <br>
                 <?php
+                echo '<div class="edit-info">';
+                    echo '<h2>Escolha uma experiência ou adicione uma nova:</h2>';
                     foreach ($experiencias as $experiencia){
                         if ($experiencia['empresa'] == NULL){
-                            echo '<h2>Adicione uma nova experiência:</h2>';
                         }else{
-                            echo '<h2>Escolha uma experiência ou adicione uma nova:</h2>';
-                            echo '<div class="info">';
-                            echo '<p><b>Nome da Empresa:</b> '. $experiencia['empresa'] .'</p>';
-                            echo '<p><b>Cargo:</b> '. $experiencia['cargo_empresa'] .'</p>';
-                            echo '<p><b>Data de Admissão:</b> '. $experiencia['data_admissao'] .'</p>';
-                            if($experiencia['data_demissao'] == NULL){
-                                echo '<p><b>Data de Demissão:</b> Ainda ativo.</p>';
-                            }else{
-                                echo '<p><b>Data de Demissão:</b> '. $experiencia['data_demissao'] .'</p>';
-                            }
-                            echo '<br>';
+                            echo '<div class="select">';
+                                echo '<a href="./partes/edit-experiencias.php?id='.$experiencia['id_experiencia'].'"><h4>'. $experiencia['empresa'] .': </h4><p>'. $experiencia['cargo_empresa'] .'</p></a>';
                             echo '</div>';
                         }
                     }
+                    echo '<div class="select">';
+                        echo '<a href="./partes/add-experiencias.php?uid='.$id.'"><h3>Adicione uma nova experiência</h3></a>';
+                    echo '</div>';
+                echo '</div>';
                 ?>
             </fieldset>
-        </div>
-    </article>
-    <article class="area-formacoes">
-        <div class="select-formacoes">
+        </article>
+        <article class="area-formacoes">
             <fieldset>
-                <legend>Editar Formações</legend>
+                <legend><b>Editar Formações</b></legend>
                 <br>
                 <?php
-                    echo '<div class="info">';
-                    foreach ($formacoes as $formacao){
-                        if ($formacao['unidade_ensino'] == NULL){
-                            echo '<p>Adicione uma nova formação:.</p>';
-                        }else{
-                            echo '<h2>Escolha uma formação ou adicione uma nova:</h2>';
-                            echo '<p><b>Unidade de Ensino:</b> '. $formacao['unidade_ensino'] .'</p>';
-                            echo '<p><b>Grau de Escolaridade:</b> '. $formacao['grau_escolaridade'] .'</p>';
-                            if ($formacao['tipo_curso'] == NULL){
+                    echo '<div class="edit-info">';
+                        echo '<h2>Escolha uma formação ou adicione uma nova:</h2>';
+                        foreach ($formacoes as $formacao){
+                            if ($formacao['unidade_ensino'] == NULL){
                             }else{
-                                echo '<p><b>Tipo do Curso:</b> '. $formacao['tipo_curso'] .'</p>';
+                                echo '<div class="select">';
+                                    echo '<a href="partes/edit-formacao.php?id='.$formacao['id'].'"><h4>'. $formacao['grau_escolaridade'] .':</h4><p> '. $formacao['unidade_ensino'] .'</p></a>';
+                                    echo '<br>';
+                                echo '</div>';
                             }
-                            echo '<p><b>Situação:</b> '. $formacao['situacao'] .'</p>';
-                            echo '<p><b>Data de Entrada:</b> '. $formacao['data_entrada'] .'</p>';
-                            echo '<p><b>Data de Conclusão:</b> '. $formacao['data_conclusao'] .'</p>';
-                            echo '<br>';
                         }
-                    }
+                        echo '<div class="select">';
+                            echo '<a href="./partes/add-formacao.php?uid='.$id.'"><h3>Adicione uma nova formação</h3></a>';
+                        echo '</div>';
                     echo '</div>';
                 ?>
             </fieldset>
-        </div>
-    </article>
-    <a href="curriculo.php" class="edit-profile"><button class="button">Voltar</button></a>
+        </article>
+    </section>
 </body>
 </html>

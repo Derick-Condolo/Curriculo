@@ -96,18 +96,24 @@ header h1{
     margin-left: 100px;
 }
 
-/* Editar */
+/* Editar (Principal)*/
+.teste{
+    margin-top: 600px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+
 .edit-box{
-    position: absolute;
-    margin-top: 30%;
     margin-bottom: 5%;
     left: 50%;
+    margin-left: 50%;
+    margin-right: 50%;
     transform: translate(-50%,-50%);
     background-color: rgba(25, 25, 67);
     padding: 20px;
     border-radius: 20px;
     width: 50%;
-    height: 104%;
+    height: 90%;
     color: white;
     font-family: "Montserrat",sans-serif;
     font-weight: lighter;
@@ -197,32 +203,103 @@ legend{
 }
 
 .area-experiencias{
-    position: absolute;
-    margin-top: 30%;
-    margin-bottom: 5%;
-    left: 50%;
+    margin-top: -350px;
+    margin-left: 50%;
+    margin-bottom: 100px;
+    margin-right: 50%;
     transform: translate(-50%,-50%);
     background-color: rgba(25, 25, 67);
     padding: 20px;
     border-radius: 20px;
     width: 50%;
-    height: 104%;
+    height: 350px;
     color: white;
     font-family: "Montserrat",sans-serif;
     font-weight: lighter;
 }
 
 .area-formacoes{
-    position: absolute;
-    margin-top: 30%;
+    margin-top: 10px;
     margin-bottom: 5%;
-    left: 50%;
+    margin-left: 50%;
+    margin-right: 50%;
     transform: translate(-50%,-50%);
     background-color: rgba(25, 25, 67);
     padding: 20px;
     border-radius: 20px;
     width: 50%;
-    height: 104%;
+    height: 80%;
+    color: white;
+    font-family: "Montserrat",sans-serif;
+    font-weight: lighter;
+}
+
+.select{
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 1rem;
+    width: 75%;
+    margin-left: 12.5%;
+    background-color: rgb(25,25,99);
+    font-family: "Montserrat",sans-serif;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+    text-align: center;
+}
+.select a{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+.select:hover{
+    transform: scale(1.05);
+    transition: 100ms linear;
+    background-color: rgb(40, 40, 40);
+}
+
+.return-profile{
+    width: 150px;
+    height: 50px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 1rem;
+    background-color: rgb(0, 0, 0);
+    font-family: "Montserrat",sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+/* Editar (Formação e Experiência)*/
+.form-box{
+    margin-top: 380px;
+    margin-bottom: 5%;
+    left: 50%;
+    margin-left: 50%;
+    margin-right: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(25, 25, 67);
+    padding: 20px;
+    border-radius: 20px;
+    width: 50%;
+    height: 90%;
+    color: white;
+    font-family: "Montserrat",sans-serif;
+    font-weight: lighter;
+}
+
+.exp-box{
+    margin-top: 315px;
+    margin-bottom: 5%;
+    left: 50%;
+    margin-left: 50%;
+    margin-right: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(25, 25, 67);
+    padding: 20px;
+    border-radius: 20px;
+    width: 50%;
+    height: 90%;
     color: white;
     font-family: "Montserrat",sans-serif;
     font-weight: lighter;

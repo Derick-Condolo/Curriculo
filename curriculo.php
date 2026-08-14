@@ -56,11 +56,11 @@ $formacoes = readAll($pdo,'formacao','uid = '. $id);
 
                 echo '<div class="info">';
                 echo '<h1>Experiências</h1>';
+                if ($experiencias == NULL){
+                    echo '<p>Sem experiência.</p>';
+                    echo '<br>';
+                }else{
                 foreach ($experiencias as $experiencia){
-                    if ($experiencia['empresa'] == NULL){
-                        echo '<p>Sem experiência.</p>';
-                        echo '<br>';
-                    }else{
                         echo '<p><b>Nome da Empresa:</b> '. $experiencia['empresa'] .'</p>';
                         echo '<p><b>Cargo:</b> '. $experiencia['cargo_empresa'] .'</p>';
                         echo '<p><b>Data de Admissão:</b> '. $experiencia['data_admissao'] .'</p>';
@@ -71,27 +71,29 @@ $formacoes = readAll($pdo,'formacao','uid = '. $id);
                         }
                         echo '<br>';
                     }
+                    echo '<br>';
                 }
                 echo '</div>';
 
                 echo '<div class="info">';
-                echo '<h1>Formações</h1>';
-                foreach ($formacoes as $formacao){
-                    if ($formacao['unidade_ensino'] == NULL){
+                    echo '<h1>Formações</h1>';
+                    if ($formacoes == NULL){
                         echo '<p>Sem formação.</p>';
                     }else{
-                        echo '<p><b>Unidade de Ensino:</b> '. $formacao['unidade_ensino'] .'</p>';
-                        echo '<p><b>Grau de Escolaridade:</b> '. $formacao['grau_escolaridade'] .'</p>';
-                        if ($formacao['tipo_curso'] == NULL){
-                        }else{
-                            echo '<p><b>Tipo do Curso:</b> '. $formacao['tipo_curso'] .'</p>';
+                        foreach ($formacoes as $formacao){
+                            echo '<p><b>Unidade de Ensino:</b> '. $formacao['unidade_ensino'] .'</p>';
+                            echo '<p><b>Grau de Escolaridade:</b> '. $formacao['grau_escolaridade'] .'</p>';
+                            if ($formacao['tipo_curso'] == NULL){
+                            }else{
+                                echo '<p><b>Tipo do Curso:</b> '. $formacao['tipo_curso'] .'</p>';
+                            }
+                            echo '<p><b>Situação:</b> '. $formacao['situacao'] .'</p>';
+                            echo '<p><b>Data de Entrada:</b> '. $formacao['data_entrada'] .'</p>';
+                            echo '<p><b>Data de Conclusão:</b> '. $formacao['data_conclusao'] .'</p>';
+                            echo '<br>';
                         }
-                        echo '<p><b>Situação:</b> '. $formacao['situacao'] .'</p>';
-                        echo '<p><b>Data de Entrada:</b> '. $formacao['data_entrada'] .'</p>';
-                        echo '<p><b>Data de Conclusão:</b> '. $formacao['data_conclusao'] .'</p>';
-                        echo '<br>';
                     }
-                }
+                    echo '<br>';
                 echo '</div>';
             };
         ?>
